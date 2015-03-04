@@ -22,7 +22,7 @@ module.exports = {
             'mongodb://localhost/inscoop'
   },
   sequelize: {
-    uri: 'postgres://ojfmghuyqfnvfe:d10vHLtgdJAE4tIDTZVTN-uqr5@ec2-23-23-80-55.compute-1.amazonaws.com:5432/d32megn1lmgjvr',
+    uri: process.env.DATABASE_URL,
     options: {
       logging: false,
       storage: 'dev.sqlite',
