@@ -17,13 +17,36 @@ This README would normally document whatever steps are necessary to get your app
 * How to run tests
 * Deployment instructions
 
-You need to set NODE_PATH=lib to heroku's configuration variables.
-NODE_PATH tells node where to find modules besides node_modules directory.
-Also, you need to tell the app to read env variables in a production environment.
+Deploying to heroku only takes a few steps.
 
-$ heroku config:set NODE_ENV=production
+yo angular-fullstack:heroku
+To work with your new heroku app using the command line, you will need to run any heroku commands from the dist folder.
 
-$ heroku config:set NODE_PATH=lib
+If you're using mongoDB you will need to add a database to your app:
+
+heroku addons:add mongohq
+Your app should now be live. To view it run heroku open.
+
+If you're using any oAuth strategies, you must set environment variables for your selected oAuth. For example, if we're using Facebook oAuth we would do this :
+
+heroku config:set FACEBOOK_ID=id
+heroku config:set FACEBOOK_SECRET=secret
+You will also need to set DOMAIN environment variable:
+
+heroku config:set DOMAIN=<your-heroku-app-name>.herokuapp.com
+
+or (if you're using it):
+
+heroku config:set DOMAIN=<your-custom-domain>
+To make your deployment process easier consider using grunt-build-control.
+
+Pushing Updates
+
+grunt
+Commit and push the resulting build, located in your dist folder:
+
+grunt buildcontrol:heroku
+
 
 
 ### Contribution guidelines ###

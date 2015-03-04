@@ -11,7 +11,7 @@ var User = sqldb.User;
 
 Thing.sync()
   .then(function() {
-    return Thing.destroy();
+    return Thing.destroy({where: {}});
   })
   .then(function() {
     Thing.bulkCreate([{
@@ -46,7 +46,7 @@ Thing.sync()
 
 User.sync()
   .then(function() {
-    User.destroy();
+    User.destroy({where: {}});
   })
   .then(function() {
     User.bulkCreate([{
