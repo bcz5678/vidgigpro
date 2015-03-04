@@ -9,7 +9,7 @@ describe('User API:', function() {
 
   // Clear users before testing
   before(function(done) {
-    User.destroy().then(function() {
+    User.destroy({where: {}}).then(function() {
       user = User.build({
         name: 'Fake User',
         email: 'test@test.com',
@@ -26,7 +26,7 @@ describe('User API:', function() {
 
   // Clear users after testing
   after(function() {
-    return User.destroy();
+    return User.destroy({where: {}});
   });
 
   describe('GET /api/users/me', function() {
