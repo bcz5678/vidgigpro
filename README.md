@@ -22,6 +22,7 @@ NODE_PATH tells node where to find modules besides node_modules directory.
 Also, you need to tell the app to read env variables in a production environment.
 
 $ heroku config:set NODE_ENV=production
+
 $ heroku config:set NODE_PATH=lib
 
 
