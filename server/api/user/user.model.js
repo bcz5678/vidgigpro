@@ -1,7 +1,7 @@
 'use strict';
 
 var crypto = require('crypto');
-var authTypes = ['github', 'twitter', 'facebook', 'google'];
+var authTypes = ['github', 'twitter', 'facebook', 'google', 'linkedin'];
 
 var validatePresenceOf = function(value) {
   return value && value.length;
