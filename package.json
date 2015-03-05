@@ -26,6 +26,7 @@
     "passport-local": "~0.1.6",
     "passport-twitter": "latest",
     "passport-linkedin": "latest",
+    "oauth": "git://github.com/ciaranj/node-oauth",
     "pg": "^4.3.0",
     "pg-hstore": "^2.3.1",
     "sequelize": "^2.0.3",
