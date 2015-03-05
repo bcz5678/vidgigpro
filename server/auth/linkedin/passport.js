@@ -5,8 +5,7 @@ exports.setup = function(User, config) {
   passport.use(new LinkedInStrategy({
     consumerKey: config.linkedin.clientID,
     consumerSecret: config.linkedin.clientSecret,
-    callbackURL: config.linkedin.callbackURL,
-    profileFields: ['id', 'first-name', 'last-name', 'email-address', 'headline']
+    callbackURL: config.linkedin.callbackURL
   },
   function(accessToken, refreshToken, profile, done) {
     User.find({
@@ -15,8 +14,8 @@ exports.setup = function(User, config) {
       .then(function(user) {
         if (!user) {
           user = User.build({
-            name: profile.first-name + " " + profile.last-name,
-            email: profile.email-address,
+            name: profile.name,
+            email: profile.email,
             role: 'user',
             provider: 'linkedin',
             linkedin: profile._json
