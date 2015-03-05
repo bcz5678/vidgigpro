@@ -1,4 +1,4 @@
-# AngularJS Full-Stack w/ PostgreSQL and Mongo
+# AngularJS Full-Stack w/ PostgreSQL and Mongo [![Build Status](https://travis-ci.org/sweigardc/angular-fullstack.svg?branch=master)](http://travis-ci.org/sweigardc/angular-fullstack)
 
 > Yeoman generator for creating MEAN stack applications, using MongoDB, Express, AngularJS, and Node - lets you quickly set up a project following best practices.
 
