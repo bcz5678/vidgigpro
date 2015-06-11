@@ -8,7 +8,7 @@ module.exports = {
     uri: 'mongodb://localhost/inscoop-dev'
   },
   sequelize: {
-    uri: 'postgres://christopherjsweigard:@localhost:5432/christopherjsweigard',
+    uri: 'postgres://vidgigdev:teamshare1234@localhost:5432/vidgigpro',
     options: {
       logging: false,
       storage: 'dev.sqlite',

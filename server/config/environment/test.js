@@ -5,13 +5,13 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/inscoop-test'
+    uri: 'mongodb://localhost/vidgig-test'
   },
   sequelize: {
-    uri: 'sqlite://',
+    uri: 'postgresql://vidgigdev:teamshare1234@localhost/vidgigpro',
     options: {
-      logging: false,
-      storage: 'test.sqlite',
+      logging: true,
+      storage: 'test.postgres',
       define: {
         timestamps: false
       }
