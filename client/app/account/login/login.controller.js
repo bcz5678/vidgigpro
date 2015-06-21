@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .controller('LoginCtrl', function($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
@@ -15,7 +15,7 @@ angular.module('inscoopApp')
         })
         .then(function() {
           // Logged in, redirect to home
-          $location.path('/');
+          $location.path('/dash');
         })
         .catch(function(err) {
           $scope.errors.other = err.message;

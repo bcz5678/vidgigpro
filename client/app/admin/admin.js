@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('inscoopApp')
-  .config(function($routeProvider) {
-    $routeProvider
-      .when('/admin', {
+angular.module('vidgigproApp')
+  .config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('admin', {
+	url: '/admin',
         templateUrl: 'app/admin/admin.html',
         controller: 'AdminCtrl'
       });

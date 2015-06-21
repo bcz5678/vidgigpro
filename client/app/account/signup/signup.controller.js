@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .controller('SignupCtrl', function($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};

@@ -1,13 +1,15 @@
 'use strict';
 
-angular.module('inscoopApp')
-  .config(function($routeProvider) {
-    $routeProvider
-      .when('/login', {
+
+angular.module('vidgigproApp')
+  .config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('login', {
+        url: '/login',
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginCtrl'
       })
-      .when('/logout', {
+      .state('logout', {
         name: 'logout',
         referrer: '/',
         template: '',
@@ -19,11 +21,13 @@ angular.module('inscoopApp')
           $location.path(referrer);
         }
       })
-      .when('/signup', {
+      .state('signup', {
+        url: '/signup',
         templateUrl: 'app/account/signup/signup.html',
         controller: 'SignupCtrl'
       })
-      .when('/settings', {
+      .state('settings', {
+        url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
         controller: 'SettingsCtrl',
         authenticate: true

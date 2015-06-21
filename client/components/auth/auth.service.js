@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .factory('Auth', function Auth($http, User, $cookieStore, $q) {
     /**
      * Return a callback or noop function

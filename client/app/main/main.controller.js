@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .controller('MainCtrl', function($scope, $http, socket) {
     $scope.awesomeThings = [];
 

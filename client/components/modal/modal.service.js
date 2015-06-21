@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

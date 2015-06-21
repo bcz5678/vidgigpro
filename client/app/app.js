@@ -1,18 +1,15 @@
 'use strict';
 
-angular.module('inscoopApp', [
+angular.module('vidgigproApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute',
+  'ui.router',
   'btford.socket-io',
   'ui.bootstrap'
 ])
-  .config(function($routeProvider, $locationProvider, $httpProvider) {
-    $routeProvider
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function($urlRouterProvider, $locationProvider, $httpProvider) {
+    $urlRouterProvider.otherwise("/");
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');

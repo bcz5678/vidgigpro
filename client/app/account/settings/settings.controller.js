@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .controller('SettingsCtrl', function($scope, User, Auth) {
     $scope.errors = {};
 

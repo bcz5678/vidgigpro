@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/inscoop-dev'
+    uri: 'mongodb://localhost/vidgigpro-dev'
   },
   sequelize: {
     uri: 'postgres://vidgigdev:teamshare1234@localhost:5432/vidgigpro',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('inscoopApp')
+angular.module('vidgigproApp')
   .controller('AdminCtrl', function($scope, $http, Auth, User) {
 
     // Use the User $resource to fetch all users
