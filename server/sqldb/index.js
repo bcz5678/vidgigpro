@@ -32,4 +32,12 @@ db.User = db.sequelize.import(path.join(
 
 // Insert models below
 
+db.Gig = db.sequelize.import(path.join(
+  config.root,
+  'server',
+  'api',
+  'user',
+  'user.model'
+));
+
 module.exports = db;
