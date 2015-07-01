@@ -36,8 +36,8 @@ db.Gig = db.sequelize.import(path.join(
   config.root,
   'server',
   'api',
-  'user',
-  'user.model'
+  'gig',
+  'gig.model'
 ));
 
 module.exports = db;
