@@ -1,0 +1,22 @@
+<div id="video-wizard" class="container-fluid" ng-controller="wizardCtrl">
+	<div id="wizard-progress" class="row animated fadeInLeft">
+		<ul id="wizard-bar" class="col-md-12 list-inline">
+			<li class="complete"><a ui-sref="wizard.step_one" >1. CREATE VIDEO<span class="list-inset">1.</span></a></li>
+			<li class="complete"><a ui-sref="wizard.step_two" >2. VIDEO DETAILS<span class="list-inset">2.</span></a></li>
+			<li class="complete"><a ui-sref="wizard.step_three" >3. SCRIPT DETAILS WRITERS<span class="list-inset">3.</span></a></li>
+			<li class="current"><a ui-sref="wizard.step_four" >4. CHOOSE YOUR MODELS<span class="list-inset">4.</span></a></li>
+			<li class="incomplete"><a ui-sref="wizard.step_five" >5. PAYMENT DETAILS<span class="list-inset">5.</span></a></li>
+			<li class="incomplete"><a ui-sref="wizard.step_six" >6. SUBMIT VIDEO<span class="list-inset">6.</span></a></li>
+		</ul>
+	</div>
+
+
+	<div ui-view></div>
+
+
+	<div>
+		<h5>Data from Form</h5>
+		{{ formData }}
+	</div>
+
+</div><!-- #video-wizard -->

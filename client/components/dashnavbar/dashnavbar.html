@@ -1,0 +1,37 @@
+<div class="navbar navbar-default navbar-fixed-color" ng-controller="DashNavbarCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand"><img src="assets/images/vidgigpro-logo.png" title="Welcome to VidGigPro!" /></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">    
+            <li><a href="how-it-works.html">Jobs</a></li>
+            <li><a ui-sref="dash.wizard">Creation</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle dashnav" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <img class="dashnav-member-img" src="assets/img/small_profile.jpg">  {{ UserInfo.name }}
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Item #1</a></li>
+                  <li><a href="#">Item #2</a></li>
+                  <li><a href="#">Item #3</a></li>
+                  <li><a href="#">Item #4</a></li>
+                </ul>
+              </div>
+            </li>
+            <li ><a href="login.html"><i class="fa fa-bell-o fa-lg" ></i><div class="notification-number" >{{ member.messages}}</div></a></li>
+            
+            <li ><a href="/settings"><i class="glyphicon glyphicon-cog"></i></a></li>
+          </ul> 
+        </div><!-- .navbar-collapse -->
+      </div><!-- .container -->
+    </div><!-- .navbar  -->

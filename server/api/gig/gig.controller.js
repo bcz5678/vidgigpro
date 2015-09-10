@@ -11,7 +11,7 @@
 
 var _ = require('lodash');
 var sqldb = require('../../sqldb')
-var gig = sqldb.gig;
+var Gig = sqldb.Gig;
 
 function handleError(res, statusCode) {
   statusCode = statusCode || 500;
@@ -61,14 +61,14 @@ function removeEntity(res) {
 
 // Get list of gigs
 exports.index = function(req, res) {
-  gig.findAll()
+  Gig.findAll()
     .then(responseWithResult(res))
     .catch(handleError(res));
 };
 
 // Get a single gig
 exports.show = function(req, res) {
-  gig.find({
+  Gig.find({
     where: {
       _id: req.params.id
     }
@@ -80,7 +80,7 @@ exports.show = function(req, res) {
 
 // Creates a new gig in the DB.
 exports.create = function(req, res) {
-  gig.create(req.body)
+  Gig.create(req.body)
     .then(responseWithResult(res, 201))
     .catch(handleError(res));
 };
@@ -90,7 +90,7 @@ exports.update = function(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  gig.find({
+  Gig.find({
     where: {
       _id: req.params.id
     }
@@ -103,7 +103,7 @@ exports.update = function(req, res) {
 
 // Deletes a gig from the DB.
 exports.destroy = function(req, res) {
-  gig.find({
+  Gig.find({
     where: {
       _id: req.params.id
     }

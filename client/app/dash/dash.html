@@ -1,7 +1,5 @@
-This is dash.html
-<br /> <br />
-Welcome {{ UserInfo.name }}
-<br />
-Email: {{ UserInfo.email }} 
-<br />
-Role: {{UserInfo.role }}
+<div ng-include="'components/dashnavbar/dashnavbar.html'"></div>
+
+<div ui-view></div>
+
+<div ng-include="'components/footer/footer.html'"></div>

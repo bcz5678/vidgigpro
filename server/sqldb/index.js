@@ -40,4 +40,12 @@ db.Gig = db.sequelize.import(path.join(
   'gig.model'
 ));
 
+db.Userprofile = db.sequelize.import(path.join(
+  config.root,
+  'server',
+  'api',
+  'userprofile',
+  'userprofile.model'
+));
+
 module.exports = db;

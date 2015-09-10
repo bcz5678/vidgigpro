@@ -9,7 +9,14 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
     name: DataTypes.STRING,
-    info: DataTypes.STRING,
-    status: DataTypes.STRING
+    created_by_id: DataTypes.INTEGER,
+    type: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    feeling_tag_array: DataTypes.TEXT,
+    preferred_talent_array: DataTypes.TEXT,
+    accepted_talent_array: DataTypes.TEXT,
+    status: DataTypes.STRING,
+    resource_array: DataTypes.STRING
   });
+
 };
